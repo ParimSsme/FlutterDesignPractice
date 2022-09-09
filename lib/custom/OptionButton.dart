@@ -13,19 +13,20 @@ class OptionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Container(
+      child: SizedBox(
         width: width,
+        height: 45,
         child: FlatButton(
             color: COLOR_DARK_BLUE,
             splashColor: COLOR_WHITE.withAlpha(55),
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
             onPressed: (){},
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(icon,color: COLOR_WHITE,),
                 addHorizontalSpace(10),
-                Text(text,style: TextStyle(color: COLOR_WHITE),)
+                Text(text,style: TextStyle(color: COLOR_WHITE, fontSize: 16), ),
               ],
             )),
       ),
